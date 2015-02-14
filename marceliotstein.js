@@ -4,7 +4,7 @@
  */
 
 (function() {
-  var app = angular.module('projectStore', []);
+  var app = angular.module('projectStore', ['ui.bootstrap']);
 
   app.controller('projectController', function(){
     this.projects = projects;
@@ -26,8 +26,15 @@
     return ("A " + mouseEventDesc + " just happened to " + mouseEvent.target.src);
   }
 
+  var getFeaturedImage = function(mouseEvent) {
+    var lilImg = mouseEvent.target.src;
+    var bigImg = lilImg.replace("150", "475");
+    return bigImg;
+  }
+
   app.controller('GalleryController', function($scope){
     $scope.onMouseOverResult = "";
+    $scope.featuredImage = "";
     this.current = 0;
     this.setCurrent = function(newGallery){
       this.current = newGallery || 0;
@@ -35,6 +42,7 @@
 
     $scope.onMouseOver = function($event) {
       $scope.onMouseOverResult = getMouseEventResult($event, "Mouse Over");
+      $scope.featuredImage = getFeaturedImage($event);
     }
 
     $scope.onMouseLeave = function($event) {
