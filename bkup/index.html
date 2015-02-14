@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="projectStore">
+  <head>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="marceliotstein.css" />
+    <script type="text/javascript" src="angular/angular.js"></script>
+    <script type="text/javascript" src="marceliotstein.js"></script>
+  </head>
+  <body ng-controller="StoreController as projectlist">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-4 text-center">
+      <header>
+        <h1 class="text-right">Marc Eliot Stein</h1>
+        <h2 class="text-right">Advanced website development</h2>
+        <div class="text-right">
+          <div class="col-md-4">
+          </div>
+          <div class="col-md-8 mes-noborder">
+            <p>I've been developing websites nearly since the web was invented, and specializing in Drupal since 2009. I enjoy working on projects for the  <a href="">federal government</a>, for <a href="">media/entertainment properties</a>, for <a href="">writers</a> and for <a href="">musicians</a>.  Application development, interface development and content management system architecture since 1995. Specialty in social responsive web applications for arts, music, media, entertainment, literature, history, politics, government and law sectors. Favored technologies include Drupal, Bootstrap, JQuery, LESS, Facebook Open Graph, iOS, Objective C, PHP, Java, Autonomy, MySQL, Linux, XML, Agile methodology.</p>
+            <p>Located in Washington DC and New York City. Contact marc.eliot.stein@gmail.com.</p>
+      </header>
+    </div>
+    <div class="col-md-5 text-center mes-noborder">
+      <div class="list-group">
+        <div class="list-group-item mes-noborder" ng-repeat="project in projectlist.projects">
+          <h3>{{project.name}}</em></h3>
+          <div ng-controller="GalleryController as gallery"  ng-show="project.images.length">
+            <ul class="img-thumbnails clearfix">
+              <li class="small-image pull-left thumbnail" ng-repeat="image in project.images">
+                <img ng-src="{{image}}" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2 text-center">
+    </div>
+  </body>
+</html>
