@@ -33,9 +33,10 @@
           <div ng-controller="GalleryController as gallery"  ng-show="project.images.length">
             <ul class="img-thumbnails clearfix">
               <li class="small-image pull-left thumbnail" ng-repeat="image in project.images">
-                <img ng-src="{{image}}" />
+                <img ng-src="{{image}}" ng-mouseover="onMouseOver($event)" ng-mouseleave="onMouseLeave($event)" />
               </li>
             </ul>
+            <strong>MOUSE OVER RESULT:</strong> {{onMouseOverResult}}
           </div>
         </div>
       </div>

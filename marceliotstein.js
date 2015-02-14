@@ -1,7 +1,7 @@
 /*
  * marceliotstein.js for new marceliotstein.com
  *
- */ 
+ */
 
 (function() {
   var app = angular.module('projectStore', []);
@@ -22,11 +22,24 @@
     };
   });
 
-  app.controller('GalleryController', function(){
+  var getMouseEventResult = function(mouseEvent, mouseEventDesc) {
+    return ("A " + mouseEventDesc + " just happened to " + mouseEvent.target.src);
+  }
+
+  app.controller('GalleryController', function($scope){
+    $scope.onMouseOverResult = "";
     this.current = 0;
     this.setCurrent = function(newGallery){
       this.current = newGallery || 0;
     };
+
+    $scope.onMouseOver = function($event) {
+      $scope.onMouseOverResult = getMouseEventResult($event, "Mouse Over");
+    }
+
+    $scope.onMouseLeave = function($event) {
+      $scope.onMouseOverResult = "";
+    }
   });
 
   var projects = [{
