@@ -2,6 +2,19 @@
  * marceliotstein.css -- css for MarcEliotStein.com
  */
 
+.mes-title {
+  text-align: center;  
+}
+
+.mes-blurb {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  border-radius: 9px;
+  text-align: left;
+  padding: 10px;
+}
+
 .mes-noborder {
   padding: 0px;
   margin: 0px;

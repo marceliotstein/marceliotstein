@@ -1,54 +1,50 @@
 <!DOCTYPE html>
 <html ng-app="projectStore">
-  <head>
-    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="marceliotstein.css" />
-    <script type="text/javascript" src="angular/angular.js"></script>
-    <script type="text/javascript" src="ui-bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
-    <script type="text/javascript" src="marceliotstein.js"></script>
-    <script type="text/javascript" src="ab-button.js"></script>
+<head>
+  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="marceliotstein.css" />
+  <script type="text/javascript" src="angular/angular.js"></script>
+  <script type="text/javascript" src="ui-bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
+  <script type="text/javascript" src="marceliotstein.js"></script>
+  <script type="text/javascript" src="ab-button.js"></script>
 
-  </head>
-  <body ng-controller="projectController as projectlist">
+</head>
+<body ng-controller="projectController as projectlist">
+  <header>
     <div class="col-md-1">
     </div>
-    <div class="col-md-4 text-center">
-      <header>
-        <h1 class="text-right">Marc Eliot Stein</h1>
-        <h2 class="text-right">
-          Software<br />
-          development<br />
-          for arts/culture<br />
-          websites
-        </h2>
-        <div class="text-right">
-          <div class="col-md-7">
-          </div>
-          <div class="col-md-5 mes-noborder">
-            <p>I've been developing websites nearly since the web was invented, and specializing in Drupal since 2009. I enjoy working on projects for the  <a href="">federal government</a>, for <a href="">media/entertainment properties</a>, for <a href="">writers</a> and for <a href="">musicians</a>.</p>
-            <p>Located in Washington DC and New York City. Contact marc.eliot.stein@gmail.com.</p>
-      </header>
+    <div class="col-md-10 text-center">
+
+      <h1 class="mes-title">Marc Eliot Stein</h1>
+      <div class="mes-blurb">
+        <p>I've been developing websites since the web was invented. I specialize in Drupal, and I like Angular.JS and Bootstrap. Here's my <a href="">LinkedIn</a>.</p>
+        <p>I like to build websites that help, inform or entertain people. I have worked in the fields of music, arts and literature, government, television, magazines, law and health care.</p>
+        <p>I split my time between Washington DC and New York City. Contact marc.eliot.stein@gmail.com.</p>
+      </div>
     </div>
+    <div class="col-md-1">
+    </div>
+  </header>
 
-    <div class="col-md-5 text-center mes-noborder">
-      <div class="list-group">
-        <div class="list-group-item mes-noborder" ng-repeat="project in projectlist.projects">
-          <h3>{{project.name}}</em></h3>
-          <div ng-controller="GalleryController as gallery"  ng-show="project.images.length">
-            <ul class="img-thumbnails clearfix">
-              <li class="small-image pull-left thumbnail" ng-repeat="image in project.images">
-                <img ng-src="{{image}}" ng-mouseover="onMouseOver($event)" ng-mouseleave="onMouseLeave($event)" />
-              </li>
-            </ul>
-            <div class="featuresite"><img ng-src="{{featuredImage}}" /></div>
+  <div class="col-md-5 text-center mes-noborder">
+    <div class="list-group">
+      <div class="list-group-item mes-noborder" ng-repeat="project in projectlist.projects">
+        <h3>{{project.name}}</em></h3>
+        <div ng-controller="GalleryController as gallery"  ng-show="project.images.length">
+          <ul class="img-thumbnails clearfix">
+            <li class="small-image pull-left thumbnail" ng-repeat="image in project.images">
+              <img ng-src="{{image}}" ng-mouseover="onMouseOver($event)" ng-mouseleave="onMouseLeave($event)" />
+            </li>
+          </ul>
+          <div class="featuresite"><img ng-src="{{featuredImage}}" /></div>
 
-            <div class="mes-debug"><strong>MOUSE OVER RESULT:</strong>{{onMouseOverResult}}</div>
-          </div>
+          <div class="mes-debug"><strong>MOUSE OVER RESULT:</strong>{{onMouseOverResult}}</div>
         </div>
       </div>
     </div>
-    <div class="col-md-2 text-center">
-    </div>
+  </div>
+  <div class="col-md-2 text-center">
+  </div>
 
-  </body>
+</body>
 </html>
