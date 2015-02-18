@@ -1,0 +1,47 @@
+<div class="main-container container-fluid">
+  <header class="hidden-xs hidden-sm col-md-12" role="banner" id="page-header">
+    <div class="row pac-topbar">
+      <span class="hidden-xs hidden-sm col-md-1"> 
+      </span>
+      <span class="btn-toolbar hidden-xs hidden-sm col-md-10" role="toolbar" aria-label="Actions"> 
+        <button type="button" class="btn btn-default">
+          <a href="/about">About this site</a>
+        </button>
+        <button type="button" class="btn btn-default">
+          <a href="/about">About this site</a>
+        </button>
+        <button type="button" class="btn btn-default">
+          <a href="/newsletter/signup">Subscribe to Weekly Newsletter</a><br />
+        </button>
+      </span>
+      <span class="hidden-xs hidden-sm col-md-1"> 
+      </span>
+    </div>
+  </header>
+  <header class="col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl" role="banner" id="page-header">
+    <div class="col-xs-2 col-sm-2 hidden-md glyph-well align-right">
+      <div class="dropdown pull-right">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdown1" data-toggle="dropdown" aria=expanded="true">
+          <span class="glyphicon glyphicon-align-justify"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdown1">
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
+            <a href="/about">About This Site</a>
+          </li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
+            <a href="/about">About This Site</a>
+          </li> 
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
+            <a href="/about">Search This Site</a>
+          </li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
+            <a href="/newsletter/signup">Subscribe To Newsletter</a>
+          </li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
+            <a href="/feed">Subscribe To Feed</a>
+          </li>
+        </ul>
+      </div>
+    </div> 
+  </header>
+

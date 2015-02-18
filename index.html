@@ -9,44 +9,45 @@
   <script type="text/javascript" src="ab-button.js"></script>
 
 </head>
-<body ng-controller="projectController as projectlist">
-  <header>
-    <h1 class="mes-title">Marc Eliot Stein</h1>
-  </header>
+<body class="container" ng-controller="projectController as projectlist">
   <div class="row">
     <div class="col-md-1">
     </div>
     <div class="col-md-10 text-center">
-
+      <h1 class="mes-title">Marc Eliot Stein</h1>
 
       <div class="mes-blurb">
-        <p>I've been developing websites since the web was invented. I specialize in Drupal, and I like Angular.JS and Bootstrap. Here's my <a href="">LinkedIn</a>.</p>
-        <p>I like to build websites that help, inform or entertain people. I have worked in the fields of music, arts and literature, government, television, magazines, law and health care.</p>
-        <p>I split my time between Washington DC and New York City. Contact marc.eliot.stein@gmail.com.</p>
+        <p>Advanced website development. Specialty in Drupal, Angular, Bootstrap.</p>
       </div>
 
+      <div class="mes-feature list-group center-block">
+        <div class="row">
+          <div class="col-xs-6">
+            <h3>Website name</h3>
+            <p>stuff</p>
+          </div>
+          <div class="col-xs-6 list-group-item mes-noborder" ng-repeat="project in projectlist.projects">
+            <!--<h3>{{project.name}}</em></h3>-->
+            <div ng-if="project.name == 'Featured'">
+              <div ng-controller="GalleryController as gallery"  ng-show="project.images.length">
+                <ul class="img-thumbnails clearfix">
+                  <li class="small-image pull-left thumbnail" ng-repeat="image in project.images">
+                    <img ng-src="{{image}}" />
+                    <!--<img ng-src="{{image}}" ng-mouseover="onMouseOver($event)" ng-mouseleave="onMouseLeave($event)" />-->
+                  </li>
+                </ul>
+                <!--<div class="featuresite"><img ng-src="{{featuredImage}}" /></div>-->
 
-
-      <div class="list-group">
-        <div class="list-group-item mes-noborder" ng-repeat="project in projectlist.projects">
-          <h3>{{project.name}}</em></h3>
-          <div ng-controller="GalleryController as gallery"  ng-show="project.images.length">
-            <ul class="img-thumbnails clearfix">
-              <li class="small-image pull-left thumbnail" ng-repeat="image in project.images">
-                <img ng-src="{{image}}" ng-mouseover="onMouseOver($event)" ng-mouseleave="onMouseLeave($event)" />
-              </li>
-            </ul>
-            <div class="featuresite"><img ng-src="{{featuredImage}}" /></div>
-
-            <div class="mes-debug"><strong>MOUSE OVER RESULT:</strong>{{onMouseOverResult}}</div>
+                <!--<div class="mes-debug"><strong>MOUSE OVER RESULT:</strong>{{onMouseOverResult}}</div>-->
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-1">
+        <div class="col-md-1">
+        </div>
       </div>
     </div>
-  </div>
 
 
-</body>
-</html>
+  </body>
+  </html>
