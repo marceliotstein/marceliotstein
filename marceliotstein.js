@@ -10,17 +10,18 @@
 
   app.controller('DemoCtrl', function($scope) {
 
-      var allSlides = ["ivillage", "cdc", "vcn", "bobdylan", "pearljam",
+      var allSlides = [["iVillage", "ivillage"], ["Center for Disease Control", "cdc"]];
+      /*var allSlides = ["ivillage", "cdc", "vcn", "bobdylan", "pearljam",
                        "bruce", "aetv", "educationalmarketer", "elisteincartoons",
                        "litkicks", "foreignpolicy", "ghpprcticalhandbooks", "historychannel",
                        "inference-results", "lpgdivorce", "timedaily", "wellformative", "wwb"];
-
+*/
       function getSlide(target, style) {
           var i = target.length;
           return {
               id: (i + 1),
-              label: 'slide #' + (i + 1),
-              img: '/marceliotstein/images/' + allSlides[i] + "150.jpg",
+              label: allSlides[i][0],
+              img: '/marceliotstein/images/' + allSlides[i][1] + "150.jpg",
               color: "#777777",
               odd: (i % 2 === 0)
           };
@@ -40,7 +41,7 @@
 
       // 2nd ngRepeat demo
       $scope.slides2 = [];
-      addSlides($scope.slides2, 'anything', 10);
+      addSlides($scope.slides2, 'anything', 2);
 
   })
 

@@ -24,37 +24,33 @@
       </div>
 
       <div class="mes-feature list-group center-block">
-        <div ng-controller="DemoCtrl">
-          <div>
-            <div class="details">
-            </div>
-            <div class="carousel-demo">
-              <ul rn-carousel rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2">
-                <li ng-repeat="slide in slides2 track by slide.id" ng-class="'id-' + slide.id">
-                  <div class="row">
-                  <div class="col-xs-6">
-                    This is {{slide.label}}
-                  </div>
-                  <div class="col-xs-6">
-                    <img ng-src={{slide.img}} />
-                  </div>
-                  </div>
-                </li>
-              </ul>
-              <div rn-carousel-indicators ng-if="slides2.length > 1" slides="slides2" rn-carousel-index="carouselIndex2"></div>
+        <div class="row">
+          <div class="col-xs-6">
+            <h3>Website name</h3>
+            <p>stuff</p>
+          </div>
+          <div class="col-xs-6" ng-repeat="project in projectlist.projects">
+            <!--<h3>{{project.name}}</em></h3>-->
+            <div ng-if="project.name == 'Featured'">
+              <div ng-controller="GalleryController as gallery"  ng-show="project.images.length">
+                <ul class="img-thumbnails clearfix">
+                  <li class="small-image pull-left thumbnail" ng-repeat="image in project.images">
+                    <img ng-src="{{image}}" />
+                    <!--<img ng-src="{{image}}" ng-mouseover="onMouseOver($event)" ng-mouseleave="onMouseLeave($event)" />-->
+                  </li>
+                </ul>
+                <!--<div class="featuresite"><img ng-src="{{featuredImage}}" /></div>-->
+
+                <!--<div class="mes-debug"><strong>MOUSE OVER RESULT:</strong>{{onMouseOverResult}}</div>-->
+              </div>
             </div>
           </div>
         </div>
+        <div class="col-md-1">
+        </div>
       </div>
-    </div>
-    <div class="col-md-1">
     </div>
   </div>
 
-
-
-  <script>
-    angular.bootstrap(document, ['DemoApp']);
-  </script>
 </body>
 </html>
