@@ -26,7 +26,7 @@
             <h3>Website name</h3>
             <p>stuff</p>
           </div>
-          <div class="col-xs-6 list-group-item mes-noborder" ng-repeat="project in projectlist.projects">
+          <div class="col-xs-6" ng-repeat="project in projectlist.projects">
             <!--<h3>{{project.name}}</em></h3>-->
             <div ng-if="project.name == 'Featured'">
               <div ng-controller="GalleryController as gallery"  ng-show="project.images.length">

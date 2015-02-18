@@ -7,7 +7,7 @@
   border-width: 3px;
   border-color: black;
   border-radius: 9px;
-  max-width: 600px;
+  max-width: 500px;
 }
 
 .mes-title {
@@ -17,12 +17,6 @@
 .mes-blurb {
   text-align: center;
   padding: 10px;
-}
-
-.mes-noborder {
-  padding: 0px;
-  margin: 0px;
-  border: 0;
 }
 
 .mes-debug {
