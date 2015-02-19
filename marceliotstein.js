@@ -68,7 +68,7 @@ function addSlides(target, style, qty) {
 
 // 2nd ngRepeat demo
 $scope.slides2 = [];
-addSlides($scope.slides2, 'anything', 3);
+addSlides($scope.slides2, 'anything', 6);
 
 })
 
