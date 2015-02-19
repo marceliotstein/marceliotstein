@@ -30,11 +30,18 @@
               <ul rn-carousel rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2">
                 <li ng-repeat="slide in slides2 track by slide.id" ng-class="'id-' + slide.id">
 
-                  <div class="col-xs-6">
-                    <h3>{{slide.label}}</h3>
-                    <p>{{slide.year}}</p>
+                  <div class="mes-project-box col-xs-6">
+                    <table class="mes-vertical-table">
+                      <tr><td class="mes-vertical-td">
+                        <h2 class="mes-project-title">{{slide.label}}</h2>
+                        <p><b><i>{{slide.blurb}}</i></b></p>
+                        <p>{{slide.tech}}</p>
+                        <p>{{slide.year}}</p>
+                        <p><a class="mes-anchor" ng-href="{{slide.projlink}}">{{slide.projlink}}</a></p>
+                      </td></tr>
+                    </table>
                   </div>
-                  <div class="col-xs-6">
+                  <div class="mes-project-box col-xs-6">
                     <img class="img-responsive" ng-src={{slide.img}} />
                   </div>
 
@@ -50,16 +57,19 @@
           <img width="180" src="/marceliotstein/images/mes2015little.jpg" />
         </div>
         <div class="mes-footer-box col-xs-6">
-          <p>Washington DC and New York City</p>
-          <p><a class="mes-anchor" target="_blank" href="https://www.linkedin.com/profile/view?id=3629296">Linked In</a></p>
-          <p>marc.eliot.stein@gmail.com</p>
+          <table class="mes-vertical-table-footer">
+            <tr><td class="mes-vertical-td">
+              <p><b>Contact: marc.eliot.stein@gmail.com</b></p>
+              <p>Washington DC<br />New York City<br />Anywhere</p>
+              <p><a class="mes-anchor" target="_blank" href="https://www.linkedin.com/profile/view?id=3629296">Linked In</a></p>
+              <p><a class="mes-anchor" target="_blank" href="https://github.com/marceliotstein">GitHub</a></p>
+            </td></tr>
+          </table>
         </div>
       </div>
       <div class="col-md-1">
       </div>
     </div>
-
-
 
     <script>
     angular.bootstrap(document, ['DemoApp']);

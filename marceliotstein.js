@@ -13,27 +13,33 @@
     var allSlides = [
     ["Center for Disease Control", "cdc", "2014",
   "Drupal, Bootstrap, JQuery",
-  "Launched new web resource 'The Community Guide' with Price Waterhouse"
+  "Launched new CDC web resource for health professionals, 'The Community Guide', with Price Waterhouse",
+  "http://daiss.thecommunityguide.org"
     ],
 ["Virtual Career Network", "vcn", "2011 to 2012",
 "Drupal 6, Drupal 7, JQuery, Bootstrap",
-"Lead developer for Department of Labor initiative."
+"Lead developer for Department of Labor initiative.",
+"http://vcn.org"
 ],
 ["Wellformative", "wellformative", "2010 to 2012",
 "Drupal, Ubercart, Drupal Commerce",
-"Lead developer for alternative health website and online store."
+"Lead developer for alternative health website and online store.",
+"http://wellformative.com"
 ],
 ["Foreign Policy Magazine", "foreignpolicy", "2009",
 "Drupal, Acquia",
-"Website and blog redesign. Social media strategy."
+"Website and blog redesign. Social media strategy.",
+"http://foreignpolicy.com"
 ],
 ["Pearl Jam", "pearljam", 2006,
 "WordPress, AJAX, MySQL",
-"Redesigned web presence and launched complete concert history database."
+"Redesigned web presence and launched complete concert history database.",
+"http://pearljam.com"
 ],
 ["Educational Marketer", "educationalmarketer", "2010 to 2012",
-"Drupal 6, Drupal 7, JQuery",
-"Built 5 subscription sites (using Drupal Multisite) for Market Research Corporations"
+"Drupal 6, Drupal 7, Multisite, JQuery",
+"Built 5 premium content sites for Market Research Corporation",
+"http://educationalmarketer.net"
 ],
 
 ];
@@ -49,6 +55,9 @@ function getSlide(target, style) {
     label: allSlides[i][0],
     img: '/marceliotstein/images/' + allSlides[i][1] + "300.jpg",
     year: allSlides[i][2],
+    tech: allSlides[i][3],
+    blurb: allSlides[i][4],
+    projlink: allSlides[i][5],
     color: "#777777",
     odd: (i % 2 === 0)
   };
