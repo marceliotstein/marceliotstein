@@ -10,22 +10,11 @@
 
   app.controller('DemoCtrl', function($scope) {
 
-    var allSlides = [ ["Foreign Policy Magazine", "foreignpolicy", "2009",
-    "Drupal, Acquia",
-    "Website and blog redesign. Social media strategy."
-    ],
+    var allSlides = [
     ["Center for Disease Control", "cdc", "2014",
   "Drupal, Bootstrap, JQuery",
   "Launched new web resource 'The Community Guide' with Price Waterhouse"
     ],
-    ["Pearl Jam", "pearljam", 2006,
-"WordPress, AJAX, MySQL",
-"Redesigned web presence and launched complete concert history database."
-    ],
-    ["Educational Marketer", "educationalmarketer", "2010 to 2012",
-"Drupal 6, Drupal 7, JQuery",
-"Built 5 subscription sites (using Drupal Multisite) for Market Research Corporations"
-],
 ["Virtual Career Network", "vcn", "2011 to 2012",
 "Drupal 6, Drupal 7, JQuery, Bootstrap",
 "Lead developer for Department of Labor initiative."
@@ -33,7 +22,19 @@
 ["Wellformative", "wellformative", "2010 to 2012",
 "Drupal, Ubercart, Drupal Commerce",
 "Lead developer for alternative health website and online store."
-]
+],
+["Foreign Policy Magazine", "foreignpolicy", "2009",
+"Drupal, Acquia",
+"Website and blog redesign. Social media strategy."
+],
+["Pearl Jam", "pearljam", 2006,
+"WordPress, AJAX, MySQL",
+"Redesigned web presence and launched complete concert history database."
+],
+["Educational Marketer", "educationalmarketer", "2010 to 2012",
+"Drupal 6, Drupal 7, JQuery",
+"Built 5 subscription sites (using Drupal Multisite) for Market Research Corporations"
+],
 
 ];
 /*var allSlides = ["ivillage", "cdc", "vcn", "bobdylan", "pearljam",
@@ -46,7 +47,7 @@ function getSlide(target, style) {
   return {
     id: (i + 1),
     label: allSlides[i][0],
-    img: '/marceliotstein/images/' + allSlides[i][1] + "150.jpg",
+    img: '/marceliotstein/images/' + allSlides[i][1] + "300.jpg",
     year: allSlides[i][2],
     color: "#777777",
     odd: (i % 2 === 0)
@@ -67,7 +68,7 @@ function addSlides(target, style, qty) {
 
 // 2nd ngRepeat demo
 $scope.slides2 = [];
-addSlides($scope.slides2, 'anything', 6);
+addSlides($scope.slides2, 'anything', 3);
 
 })
 
