@@ -28,21 +28,19 @@
           </div>
           <div class="carousel-demo">
 
-            <!-- XS AND SM ONLY -->
-            <div class="col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl">
+            <!-- XS ONLY -->
+            <div class="col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
               <ul rn-carousel mes-carousel-xs rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2">
                 <li ng-repeat="slide in slides2 track by slide.id" ng-class="'id-' + slide.id">
 
-                  <div class="mes-project-box col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl">
-                    <img class="img-responsive" ng-src={{slide.img}} />
+                  <div class="mes-project-box col-xs-12">
+                    <img class="img-responsive" ng-src={{slide.imgsmall}} />
                   </div>
-                  <div class="mes-project-box col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl">
+                  <div class="mes-project-box col-xs-12">
                     <table class="mes-vertical-table">
                       <tr><td class="mes-vertical-td">
                         <h2 class="mes-project-title">{{slide.label}}</h2>
-                        <p><b><i>{{slide.blurb}}</i></b></p>
-                        <p>{{slide.tech}}</p>
-                        <p>{{slide.year}}</p>
+                        <p>{{slide.blurb}} {{slide.tech}}. {{slide.year}}.</p>
                         <p><a class="mes-anchor" ng-href="{{slide.projlink}}">{{slide.projlink}}</a></p>
                       </td></tr>
                     </table>
@@ -50,12 +48,12 @@
                 </li>
               </ul>
             </div>
-            <!-- MD AND LARGER -->
-            <div class="hidden-xs hidden-sm col-md-12 col-lg-12 col-xl-12">
+            <!-- SM AND LARGER -->
+            <div class="hidden-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <ul rn-carousel mes-carousel-md rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2">
                 <li ng-repeat="slide in slides2 track by slide.id" ng-class="'id-' + slide.id">
 
-                  <div class="mes-project-box hidden-xs hidden-sm col-md-6">
+                  <div class="mes-project-box hidden-xs col-sm-6">
                     <table class="mes-vertical-table">
                       <tr><td class="mes-vertical-td">
                         <h2 class="mes-project-title">{{slide.label}}</h2>
@@ -66,8 +64,8 @@
                       </td></tr>
                     </table>
                   </div>
-                  <div class="mes-project-box hidden-xs hidden-sm col-md-6">
-                    <img class="img-responsive" ng-src={{slide.img}} />
+                  <div class="mes-project-box hidden-xs col-sm-6">
+                    <img class="img-responsive" ng-src={{slide.imgsmall}} />
                   </div>
                 </li>
               </ul>
