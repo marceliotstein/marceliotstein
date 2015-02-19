@@ -1,36 +1,42 @@
 <!DOCTYPE html>
 <html ng-app="projectStore">
 <head>
-  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
-  <link rel="stylesheet" type="text/css" href="angular-carousel/angular-carousel.css" />
-  <link rel="stylesheet" type="text/css" href="simple-carousel.css" />
-  <link rel="stylesheet" type="text/css" href="marceliotstein.css" />
-  <script type="text/javascript" src="angular/angular.js"></script>
-  <script type="text/javascript" src="angular/angular-touch.js"></script>
-  <script type="text/javascript" src="ui-bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
-  <script type="text/javascript" src="angular-carousel/angular-carousel.js"></script>
-  <script type="text/javascript" src="marceliotstein.js"></script>
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="angular-carousel/angular-carousel.css" />
+<link rel="stylesheet" type="text/css" href="simple-carousel.css" />
+<link rel="stylesheet" type="text/css" href="marceliotstein.css" />
+<script type="text/javascript" src="angular/angular.js"></script>
+<script type="text/javascript" src="angular/angular-touch.js"></script>
+<script type="text/javascript" src="ui-bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
+<script type="text/javascript" src="angular-carousel/angular-carousel.js"></script>
+<script type="text/javascript" src="marceliotstein.js"></script>
 </head>
 <body class="mes-body container"
 <div ng-controller="projectController as projectlist">
-  <div class="row">
-    <div class="col-md-1">
+<div class="row">
+  <div class="col-md-1">
+  </div>
+  <div class="col-md-10 text-center">
+    <div class="mes-title center-block">
+      <img src="/marceliotstein/images/mesboard800.png" class="img-responsive" alt="Marc Eliot Stein. Advanced website development. Specialty in Drupal, Angular, Bootstrap.">
     </div>
-    <div class="col-md-10 text-center">
-      <div class="mes-title center-block">
-        <img src="/marceliotstein/images/mesboard800.png" class="img-responsive" alt="Marc Eliot Stein. Advanced website development. Specialty in Drupal, Angular, Bootstrap.">
-      </div>
 
-      <div class="mes-feature list-group center-block">
-        <div ng-controller="DemoCtrl">
-          <div>
-            <div class="details">
-            </div>
-            <div class="carousel-demo">
-              <ul rn-carousel rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2">
+    <div class="mes-feature list-group center-block">
+      <div ng-controller="DemoCtrl">
+        <div>
+          <div class="details">
+          </div>
+          <div class="carousel-demo">
+
+            <!-- XS ONLY -->
+            <div class="col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
+              <ul rn-carousel mes-carousel-xs rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2">
                 <li ng-repeat="slide in slides2 track by slide.id" ng-class="'id-' + slide.id">
 
-                  <div class="mes-project-box col-xs-6">
+                  <div class="mes-project-box col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
+                    <img class="img-responsive" ng-src={{slide.img}} />
+                  </div>
+                  <div class="mes-project-box col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
                     <table class="mes-vertical-table">
                       <tr><td class="mes-vertical-td">
                         <h2 class="mes-project-title">{{slide.label}}</h2>
@@ -41,38 +47,73 @@
                       </td></tr>
                     </table>
                   </div>
-                  <div class="mes-project-box col-xs-6">
-                    <img class="img-responsive" ng-src={{slide.img}} />
-                  </div>
-
                 </li>
               </ul>
-              <div rn-carousel-indicators ng-if="slides2.length > 1" slides="slides2" rn-carousel-index="carouselIndex2"></div>
             </div>
+            <!-- SM AND LARGER -->
+            <div class="hidden-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <ul rn-carousel mes-carousel-sm rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2">
+                <li ng-repeat="slide in slides2 track by slide.id" ng-class="'id-' + slide.id">
+
+                  <div class="mes-project-box hidden-xs col-sm-6">
+                    <table class="mes-vertical-table">
+                      <tr><td class="mes-vertical-td">
+                        <h2 class="mes-project-title">{{slide.label}}</h2>
+                        <p><b><i>{{slide.blurb}}</i></b></p>
+                        <p>{{slide.tech}}</p>
+                        <p>{{slide.year}}</p>
+                        <p><a class="mes-anchor" ng-href="{{slide.projlink}}">{{slide.projlink}}</a></p>
+                      </td></tr>
+                    </table>
+                  </div>
+                  <div class="mes-project-box hidden-xs col-sm-6">
+                    <img class="img-responsive" ng-src={{slide.img}} />
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div rn-carousel-indicators ng-if="slides2.length > 1" slides="slides2" rn-carousel-index="carouselIndex2"></div>
           </div>
         </div>
       </div>
-      <div class="row mes-footer center-block">
-        <div class="mes-footer-box col-xs-6">
-          <img width="180" src="/marceliotstein/images/mes2015little.jpg" />
-        </div>
-        <div class="mes-footer-box col-xs-6">
-          <table class="mes-vertical-table-footer">
-            <tr><td class="mes-vertical-td">
-              <p><b>Contact: marc.eliot.stein@gmail.com</b></p>
-              <p>Washington DC<br />New York City<br />Anywhere</p>
-              <p><a class="mes-anchor" target="_blank" href="https://www.linkedin.com/profile/view?id=3629296">Linked In</a></p>
-              <p><a class="mes-anchor" target="_blank" href="https://github.com/marceliotstein">GitHub</a></p>
-            </td></tr>
-          </table>
-        </div>
+    </div>
+    <div class="row mes-footer center-block">
+      <!-- XS ONLY -->
+      <div class="mes-footer-box col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
+        <img width="180" src="/marceliotstein/images/mes2015little.jpg" />
       </div>
-      <div class="col-md-1">
+      <div class="mes-footer-box col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl text-center">
+        <table class="mes-vertical-table-footer">
+          <tr><td class="mes-vertical-td">
+            <p><b>Contact: marc.eliot.stein@gmail.com</b></p>
+            <p>Washington DC<br />New York City<br />Anywhere</p>
+            <p><a class="mes-anchor" target="_blank" href="https://www.linkedin.com/profile/view?id=3629296">Linked In</a></p>
+            <p><a class="mes-anchor" target="_blank" href="https://github.com/marceliotstein">GitHub</a></p>
+          </td></tr>
+        </table>
+      </div>
+      <!-- SM AND LARGER -->
+      <div class="mes-footer-box hidden-xs col-sm-6">
+        <img width="180" src="/marceliotstein/images/mes2015little.jpg" />
+      </div>
+      <div class="mes-footer-box hidden-xs col-sm-6">
+        <table class="mes-vertical-table-footer">
+          <tr><td class="mes-vertical-td">
+            <p><b>Contact: marc.eliot.stein@gmail.com</b></p>
+            <p>Washington DC<br />New York City<br />Anywhere</p>
+            <p><a class="mes-anchor" target="_blank" href="https://www.linkedin.com/profile/view?id=3629296">Linked In</a></p>
+            <p><a class="mes-anchor" target="_blank" href="https://github.com/marceliotstein">GitHub</a></p>
+          </td></tr>
+        </table>
       </div>
     </div>
-
-    <script>
-    angular.bootstrap(document, ['DemoApp']);
-    </script>
-  </body>
-  </html>
+    <div class="col-md-1">
+    </div>
+  </div>
+  
+  <script>
+  angular.bootstrap(document, ['DemoApp']);
+  </script>
+</body>
+</html>

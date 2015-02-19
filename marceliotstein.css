@@ -2,6 +2,16 @@
  * marceliotstein.css -- css for MarcEliotStein.com
  */
 
+ ul[mes-carousel-xs] {
+     width: 350px;
+     height: 620px
+ }
+
+ ul[mes-carousel-sm] {
+     width: 700px;
+     height: 300px;
+ }
+
 .mes-body {
   background-color: #ffffff;
 }
@@ -17,8 +27,8 @@
 }
 
 .mes-footer {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 60px;
+  margin-bottom: 60px;
   padding: 10px;
   text-align: center;
   border-style: solid;
@@ -50,11 +60,14 @@
 
 .mes-vertical-table-footer {
   height: 200px;
+  width: 100%;
+  text-align: center;
 }
 
 .mes-vertical-td {
   height: 100%;
   vertical-align: middle;
+  text-align: center;
 }
 
 .mes-title {
