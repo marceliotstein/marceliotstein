@@ -28,8 +28,8 @@
           </div>
           <div class="carousel-demo">
 
-            <!-- XS ONLY -->
-            <div class="col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
+            <!-- XS AND SM ONLY -->
+            <div class="col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl">
               <ul rn-carousel mes-carousel-xs rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2">
                 <li ng-repeat="slide in slides2 track by slide.id" ng-class="'id-' + slide.id">
 
@@ -50,9 +50,9 @@
                 </li>
               </ul>
             </div>
-            <!-- SM AND LARGER -->
-            <div class="hidden-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <ul rn-carousel mes-carousel-sm rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2">
+            <!-- MD AND LARGER -->
+            <div class="hidden-xs hidden-sm col-md-12 col-lg-12 col-xl-12">
+              <ul rn-carousel mes-carousel-md rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2">
                 <li ng-repeat="slide in slides2 track by slide.id" ng-class="'id-' + slide.id">
 
                   <div class="mes-project-box hidden-xs col-sm-6">
@@ -79,11 +79,11 @@
       </div>
     </div>
     <div class="row mes-footer center-block">
-      <!-- XS ONLY -->
-      <div class="mes-footer-box col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
+      <!-- XS AND SM ONLY -->
+      <div class="mes-footer-box col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl">
         <img width="180" src="images/mes2015little.jpg" />
       </div>
-      <div class="mes-footer-box col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl text-center">
+      <div class="mes-footer-box col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl text-center">
         <table class="mes-vertical-table-footer">
           <tr><td class="mes-vertical-td">
             <p><b>Contact: marc.eliot.stein@gmail.com</b></p>
@@ -93,11 +93,11 @@
           </td></tr>
         </table>
       </div>
-      <!-- SM AND LARGER -->
-      <div class="mes-footer-box hidden-xs col-sm-6">
+      <!-- MD AND LARGER -->
+      <div class="mes-footer-box hidden-xs hidden-sm col-md-6">
         <img width="180" src="images/mes2015little.jpg" />
       </div>
-      <div class="mes-footer-box hidden-xs col-sm-6">
+      <div class="mes-footer-box hidden-xs hidden-sm col-md-6">
         <table class="mes-vertical-table-footer">
           <tr><td class="mes-vertical-td">
             <p><b>Contact: marc.eliot.stein@gmail.com</b></p>
