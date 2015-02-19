@@ -6,6 +6,11 @@
   background-color: #ffffff;
 }
 
+.mes-footer {
+  padding-top: 50px;
+  text-align: center;
+}
+
 .mes-feature {
   border-style: solid;
   border-width: 3px;

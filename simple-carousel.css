@@ -68,7 +68,7 @@ input.tiny {
 }
 
 .custom-indicator span {
-  transition: all 0.3s ease-in;
+  transition: all 0.9s ease-in;
 }
 .custom-indicator span.active {
   color:yellow !important;
