@@ -33,10 +33,10 @@
               <ul rn-carousel mes-carousel-xs rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2">
                 <li ng-repeat="slide in slides2 track by slide.id" ng-class="'id-' + slide.id">
 
-                  <div class="mes-project-box col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
+                  <div class="mes-project-box col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl">
                     <img class="img-responsive" ng-src={{slide.img}} />
                   </div>
-                  <div class="mes-project-box col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
+                  <div class="mes-project-box col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl">
                     <table class="mes-vertical-table">
                       <tr><td class="mes-vertical-td">
                         <h2 class="mes-project-title">{{slide.label}}</h2>
@@ -55,7 +55,7 @@
               <ul rn-carousel mes-carousel-md rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2">
                 <li ng-repeat="slide in slides2 track by slide.id" ng-class="'id-' + slide.id">
 
-                  <div class="mes-project-box hidden-xs col-sm-6">
+                  <div class="mes-project-box hidden-xs hidden-sm col-md-6">
                     <table class="mes-vertical-table">
                       <tr><td class="mes-vertical-td">
                         <h2 class="mes-project-title">{{slide.label}}</h2>
@@ -66,7 +66,7 @@
                       </td></tr>
                     </table>
                   </div>
-                  <div class="mes-project-box hidden-xs col-sm-6">
+                  <div class="mes-project-box hidden-xs hidden-sm col-md-6">
                     <img class="img-responsive" ng-src={{slide.img}} />
                   </div>
                 </li>
