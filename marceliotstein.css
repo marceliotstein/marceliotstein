@@ -2,16 +2,21 @@
  * marceliotstein.css -- css for MarcEliotStein.com
  */
 
+.mes-body {
+  background-color: #ffffff;
+}
+
 .mes-feature {
   border-style: solid;
   border-width: 3px;
   border-color: black;
   border-radius: 9px;
-  max-width: 800px;
+  max-width: 700px;
 }
 
 .mes-title {
   text-align: center;
+  max-width: 700px;
 }
 
 .mes-blurb {

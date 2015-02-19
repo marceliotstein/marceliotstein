@@ -11,16 +11,14 @@
   <script type="text/javascript" src="angular-carousel/angular-carousel.js"></script>
   <script type="text/javascript" src="marceliotstein.js"></script>
 </head>
-<body class="container"
+<body class="mes-body container"
 <div ng-controller="projectController as projectlist">
   <div class="row">
     <div class="col-md-1">
     </div>
     <div class="col-md-10 text-center">
-      <h1 class="mes-title">Marc Eliot Stein</h1>
-
-      <div class="mes-blurb">
-        <p>Advanced website development. Specialty in Drupal, Angular, Bootstrap.</p>
+      <div class="mes-title center-block">
+        <img src="/marceliotstein/images/mesboard900.png" class="img-responsive" alt="Marc Eliot Stein. Advanced website development. Specialty in Drupal, Angular, Bootstrap.">
       </div>
 
       <div class="mes-feature list-group center-block">
@@ -31,7 +29,7 @@
             <div class="carousel-demo">
               <ul rn-carousel rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2">
                 <li ng-repeat="slide in slides2 track by slide.id" ng-class="'id-' + slide.id">
-                  <div class="row">
+
                   <div class="col-xs-6">
                     <h3>{{slide.label}}</h3>
                     <p>{{slide.year}}</p>
@@ -39,7 +37,7 @@
                   <div class="col-xs-6">
                     <img ng-src={{slide.img}} />
                   </div>
-                  </div>
+
                 </li>
               </ul>
               <div rn-carousel-indicators ng-if="slides2.length > 1" slides="slides2" rn-carousel-index="carouselIndex2"></div>
