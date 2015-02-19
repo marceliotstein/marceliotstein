@@ -53,7 +53,7 @@ function getSlide(target, style) {
   return {
     id: (i + 1),
     label: allSlides[i][0],
-    img: '/marceliotstein/images/' + allSlides[i][1] + "300.jpg",
+    img: 'images/' + allSlides[i][1] + "300.jpg",
     year: allSlides[i][2],
     tech: allSlides[i][3],
     blurb: allSlides[i][4],
