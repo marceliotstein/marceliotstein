@@ -33,7 +33,8 @@
                 <li ng-repeat="slide in slides2 track by slide.id" ng-class="'id-' + slide.id">
                   <div class="row">
                   <div class="col-xs-6">
-                    This is {{slide.label}}
+                    <h3>{{slide.label}}</h3>
+                    <p>{{slide.year}}</p>
                   </div>
                   <div class="col-xs-6">
                     <img ng-src={{slide.img}} />
