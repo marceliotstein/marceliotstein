@@ -39,8 +39,7 @@
 
                 <div class="mes-project-box col-xs-12">
                   <img class="img-responsive" ng-src={{slide.imgsmall}} />
-                </div>
-                <div class="mes-project-box col-xs-12">
+
                   <table class="mes-vertical-table">
                     <tr><td class="mes-vertical-td">
                       <h2 class="mes-project-title">{{slide.label}}</h2>
@@ -63,24 +62,32 @@
 
         <!-- THE WIDE WAY -->
         <div class="hidden-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
-          <div class="carousel-demo">
-            <ul rn-carousel mes-carousel-md rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2">
-              <li ng-repeat="slide in slides2 track by slide.id" ng-class="'id-' + slide.id">
+          <div class="row">
+            <div class="hidden-xs col-sm-6">
+              <div class="mes-blurb center-block">
+                <img src="images/mesblurb600.png" class="img-responsive" alt="xyz" />
+              </div>
+            </div>
+            <div class="hidden-xs col-sm-6">
+              <div class="carousel-demo">
+                <ul rn-carousel mes-carousel-md rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2">
+                  <li ng-repeat="slide in slides2 track by slide.id" ng-class="'id-' + slide.id">
 
-                <div class="mes-project-box hidden-xs col-sm-6">
-                  <table class="mes-vertical-table">
-                    <tr><td class="mes-vertical-td">
-                      <h2 class="mes-project-title">{{slide.label}}</h2>
-                      <p><b><i>{{slide.blurb}}</i></b></p>
-                      <p>{{slide.tech}}</p>
-                      <p>{{slide.year}}</p>
-                      <p><a class="mes-anchor" ng-href="{{slide.projlink}}">{{slide.projlink}}</a></p>
-                    </td></tr>
-                  </table>
+
+
+                    <img class="img-responsive" ng-src={{slide.imgsmall}} />
+                    <table class="mes-vertical-table">
+                      <tr><td class="mes-vertical-td">
+                        <h2 class="mes-project-title">{{slide.label}}</h2>
+                        <p><b><i>{{slide.blurb}}</i></b></p>
+                        <p>{{slide.tech}}</p>
+                        <p>{{slide.year}}</p>
+                        <p><a class="mes-anchor" ng-href="{{slide.projlink}}">{{slide.projlink}}</a></p>
+                      </td></tr>
+                    </table>
+                  </div>
                 </div>
-                <div class="mes-project-box hidden-xs col-sm-6">
-                  <img class="img-responsive" ng-src={{slide.imgsmall}} />
-                </div>
+
               </li>
             </ul>
           </div>
