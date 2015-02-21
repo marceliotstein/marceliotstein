@@ -13,11 +13,12 @@
 <body class="mes-body container"
 
 <div class="row">
-  <div class="col-md-1">
+  <!-- OPTIONAL BUFFER -->
+  <div class="hidden-xs hidden-sm col-md-1">
   </div>
 
   <!-- MAIN THEATRE -->
-  <div class="col-md-10 text-center">
+  <div class="col-xs-12 col-sm-12 col-md-10 text-center">
 
     <!-- HEADER -->
     <div class="mes-title center-block">
@@ -27,17 +28,17 @@
     </div>
 
     <!-- MAIN CONTENT -->
-    <div class="col-xs-12 mes-feature list-group center-block">
+    <div class="col-xs-12 list-group center-block">
       <div ng-controller="DemoCtrl">
 
         <!-- THE NARROW WAY -->
-        <div class="col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
+        <div class="col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl">
           <div class="carousel-demo">
             <ul rn-carousel mes-carousel-xs rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2">
               <li ng-repeat="slide in slides2 track by slide.id" ng-class="'id-' + slide.id">
 
                 <div class="mes-project-box col-xs-12">
-                  <img class="mes-project-img img-responsive" ng-src={{slide.imgsmall}} />
+                  <img class="mes-project-img img-responsive" ng-src={{slide.imgmedium}} />
 
                   <table class="mes-table">
                     <tr><td class="mes-narrow-td">
@@ -52,24 +53,25 @@
           </div>
           <div rn-carousel-indicators ng-if="slides2.length > 1" slides="slides2" rn-carousel-index="carouselIndex2"></div>
 
-          <div class="col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
-            <div class="mes-blurb center-block">
+          <div class="col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl">
+            <div class="mes-narrow-blurb center-block">
               <img src="images/mesblurb600.png" class="img-responsive" alt="xyz" />
             </div>
           </div>
         </div>
 
         <!-- THE WIDE WAY -->
-        <div class="hidden-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <div class="hidden-xs hidden-sm col-md-12 col-lg-12 col-xl-12">
           <table class="mes-table">
             <tr>
               <td class="mes-wide-td">
-                <div class="mes-blurb center-block">
+                <div class="mes-wide-blurb center-block">
                   <img src="images/mesblurb600.png" class="img-responsive" alt="Advanced web development for arts,
                   media, music, business, books, law, government. Social + Responsive" />
                 </div>
               </td>
               <td class="mes-wide-td">
+                <div class="mes-feature-box">
                 <div class="carousel-demo">
                   <ul rn-carousel mes-carousel-md rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2">
                     <li ng-repeat="slide in slides2 track by slide.id" ng-class="'id-' + slide.id">
@@ -84,6 +86,7 @@
                   <div rn-carousel-indicators ng-if="slides2.length > 1" slides="slides2" rn-carousel-index="carouselIndex2">
                   </div>
                 </div>
+              </div>
               </td>
             </tr>
           </table>
@@ -129,7 +132,8 @@
     </div>
     <!-- END OF MAIN THEATRE -->
 
-    <div class="col-md-1">
+    <!-- OPTIONAL BUFFER -->
+    <div class="hidden-xs hidden-sm col-md-1">
     </div>
   </div>
 
