@@ -151,6 +151,8 @@ ul[mes-carousel-md] {
   border-style: solid;
   border-width: 3px;
   border-color: black;
+  border-radius: 9px;
+  padding: 18px;
 }
 
 .mes-table {
