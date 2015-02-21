@@ -89,12 +89,12 @@ input.tiny {
 
 ul[mes-carousel-xs] {
   width: 300px;
-  height: 460px;
+  height: 520px;
 }
 
 ul[mes-carousel-md] {
   width: 300px;
-  height: 460px;
+  height: 520px;
 }
 
 .mes-body {
@@ -116,10 +116,10 @@ ul[mes-carousel-md] {
   margin-bottom: 60px;
   padding: 10px;
   text-align: center;
-  border-style: solid;
+  /*border-style: solid;
   border-width: 2px;
-  border-color: #7f7f7f;
-  border-radius: 9px;
+  border-color: blue;
+  border-radius: 9px;*/
 }
 
 .mes-hr {
@@ -145,7 +145,7 @@ ul[mes-carousel-md] {
 
 .mes-project-img {
   border-style: solid;
-  border-width: 2px;
+  border-width: 3px;
   border-color: black;
 }
 
@@ -153,18 +153,20 @@ ul[mes-carousel-md] {
   text-align: center;
 }
 
-.mes-narrow-table {
-  min-width: 320px;
+.mes-table {
+  width: 100%;
+}
+
+.mes-footer-td {
+  height: 100%;
+  vertical-align: middle;
+  margin: 0px auto;
 }
 
 .mes-narrow-td {
   height: 100%;
   vertical-align: middle;
-  text-align: center;
-}
-
-.mes-wide-table {
-  width: 100%;
+  margin: 0px auto;
 }
 
 .mes-wide-td {
