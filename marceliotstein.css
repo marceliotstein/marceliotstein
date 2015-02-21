@@ -17,8 +17,8 @@ ul[mes-carousel-xs] {
 }
 
 ul[mes-carousel-md] {
-  width: 700px;
-  height: 300px;
+  width: 300px;
+  height: 620px;
 }
 
 .mes-body {
@@ -44,7 +44,6 @@ ul[mes-carousel-md] {
   border-width: 2px;
   border-color: #7f7f7f;
   border-radius: 9px;
-  max-width: 550px;
 }
 
 .mes-hr {
@@ -53,16 +52,13 @@ ul[mes-carousel-md] {
   border-width: 4px;
   border-color: black;
   border-radius: 9px;
-  max-width: 700px;
 }
 
 .mes-feature {
-  text-align: center;
   border-style: solid;
-  border-width: 7px;
-  border-color: blue;
+  border-width: 2px;
+  border-color: gray;
   border-radius: 9px;
-  max-width: 700px;
 }
 
 .mes-project-title {
@@ -91,7 +87,6 @@ ul[mes-carousel-md] {
 
 .mes-title {
   text-align: center;
-  max-width: 700px;
   margin-top: 30px;
   margin-bottom: 30px;
 }
