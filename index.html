@@ -3,7 +3,6 @@
 <head>
   <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="angular-carousel/angular-carousel.css" />
-  <link rel="stylesheet" type="text/css" href="simple-carousel.css" />
   <link rel="stylesheet" type="text/css" href="marceliotstein.css" />
   <script type="text/javascript" src="angular/angular.js"></script>
   <script type="text/javascript" src="angular/angular-touch.js"></script>
@@ -38,11 +37,11 @@
               <li ng-repeat="slide in slides2 track by slide.id" ng-class="'id-' + slide.id">
 
                 <div class="mes-project-box col-xs-12">
-                  <img class="img-responsive" ng-src={{slide.imgsmall}} />
+                  <img class="mes-project-img img-responsive" ng-src={{slide.imgsmall}} />
 
                   <table class="mes-vertical-table">
                     <tr><td class="mes-vertical-td">
-                      <h2 class="mes-project-title">{{slide.label}}</h2>
+                      <p class="mes-project-title">{{slide.label}}</p>
                       <p>{{slide.blurb}} {{slide.tech}}. {{slide.year}}.</p>
                       <p><a class="mes-anchor" ng-href="{{slide.projlink}}">{{slide.projlink}}</a></p>
                     </td></tr>
@@ -62,42 +61,33 @@
 
         <!-- THE WIDE WAY -->
         <div class="hidden-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
-          <div class="row">
-            <div class="hidden-xs col-sm-6">
-              <div class="mes-blurb center-block">
-                <img src="images/mesblurb600.png" class="img-responsive" alt="xyz" />
-              </div>
-            </div>
-            <div class="hidden-xs col-sm-6">
-              <div class="carousel-demo">
-                <ul rn-carousel mes-carousel-md rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2">
-                  <li ng-repeat="slide in slides2 track by slide.id" ng-class="'id-' + slide.id">
-
-
-
-                    <img class="img-responsive" ng-src={{slide.imgsmall}} />
-                    <table class="mes-vertical-table">
-                      <tr><td class="mes-vertical-td">
-                        <h2 class="mes-project-title">{{slide.label}}</h2>
-                        <p><b><i>{{slide.blurb}}</i></b></p>
-                        <p>{{slide.tech}}</p>
-                        <p>{{slide.year}}</p>
-                        <p><a class="mes-anchor" ng-href="{{slide.projlink}}">{{slide.projlink}}</a></p>
-                      </td></tr>
-                    </table>
-                  </div>
+          <table class="mes-vertical-table">
+            <tr>
+              <td class="mes-vertical-td mes-td-half">
+                <div class="mes-blurb center-block">
+                  <img src="images/mesblurb600.png" class="img-responsive" alt="xyz" />
                 </div>
-
-              </li>
-            </ul>
-          </div>
-
-          <div rn-carousel-indicators ng-if="slides2.length > 1" slides="slides2" rn-carousel-index="carouselIndex2">
-          </div>
-        </div>
-        <!-- END OF WIDE WAY -->
-
+              </td>
+              <td class="mes-vertical-td mes-td-half">
+                <div class="carousel-demo">
+                  <ul rn-carousel mes-carousel-md rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2">
+                    <li ng-repeat="slide in slides2 track by slide.id" ng-class="'id-' + slide.id">
+                      <img class="mes-project-img img-responsive" ng-src={{slide.imgsmall}} />
+                      <p class="mes-project-title">{{slide.label}}</p>
+                      <p><b><i>{{slide.blurb}}</i></b></p>
+                      <p>{{slide.tech}}</p>
+                      <p>{{slide.year}}</p>
+                      <p><a class="mes-anchor" ng-href="{{slide.projlink}}">{{slide.projlink}}</a></p>
+                    </li>
+                  </ul>
+                <div rn-carousel-indicators ng-if="slides2.length > 1" slides="slides2" rn-carousel-index="carouselIndex2">
+              </div>
+            </td>
+          </tr>
+        </table>
       </div>
+      <!-- END OF WIDE WAY -->
+
     </div>
 
 
