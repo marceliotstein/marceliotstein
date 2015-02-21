@@ -39,8 +39,8 @@
                 <div class="mes-project-box col-xs-12">
                   <img class="mes-project-img img-responsive" ng-src={{slide.imgsmall}} />
 
-                  <table class="mes-vertical-table">
-                    <tr><td class="mes-vertical-td">
+                  <table class="mes-narrow-table">
+                    <tr><td class="mes-narrow-td">
                       <p class="mes-project-title">{{slide.label}}</p>
                       <p>{{slide.blurb}} {{slide.tech}}. {{slide.year}}.</p>
                       <p><a class="mes-anchor" ng-href="{{slide.projlink}}">{{slide.projlink}}</a></p>
@@ -61,14 +61,15 @@
 
         <!-- THE WIDE WAY -->
         <div class="hidden-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
-          <table class="mes-vertical-table">
+          <table class="mes-wide-table">
             <tr>
-              <td class="mes-vertical-td mes-td-half">
+              <td class="mes-wide-td">
                 <div class="mes-blurb center-block">
-                  <img src="images/mesblurb600.png" class="img-responsive" alt="xyz" />
+                  <img src="images/mesblurb600.png" class="img-responsive" alt="Advanced web development for arts,
+                  media, music, business, books, law, government. Social + Responsive" />
                 </div>
               </td>
-              <td class="mes-vertical-td mes-td-half">
+              <td class="mes-wide-td">
                 <div class="carousel-demo">
                   <ul rn-carousel mes-carousel-md rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2">
                     <li ng-repeat="slide in slides2 track by slide.id" ng-class="'id-' + slide.id">
@@ -80,58 +81,59 @@
                       <p><a class="mes-anchor" ng-href="{{slide.projlink}}">{{slide.projlink}}</a></p>
                     </li>
                   </ul>
-                <div rn-carousel-indicators ng-if="slides2.length > 1" slides="slides2" rn-carousel-index="carouselIndex2">
-              </div>
-            </td>
-          </tr>
-        </table>
+                  <div rn-carousel-indicators ng-if="slides2.length > 1" slides="slides2" rn-carousel-index="carouselIndex2">
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!-- END OF WIDE WAY -->
+
       </div>
-      <!-- END OF WIDE WAY -->
+
+
+      <!-- FOOTER -->
+      <div class="col-xs-12 row mes-footer center-block">
+        <!-- XS AND SM ONLY -->
+        <div class="mes-footer-box col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl">
+          <img width="180" src="images/mes2015little.jpg" />
+        </div>
+        <div class="mes-footer-box col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl text-center">
+          <table class="mes-vertical-table-footer">
+            <tr><td class="mes-vertical-td">
+              <p><b>Contact: marc.eliot.stein@gmail.com</b></p>
+              <p>Washington DC<br />New York City<br />Anywhere</p>
+              <p><a class="mes-anchor" target="_blank" href="https://www.linkedin.com/profile/view?id=3629296">LinkedIn</a></p>
+              <p><a class="mes-anchor" target="_blank" href="https://github.com/marceliotstein">GitHub</a></p>
+            </td></tr>
+          </table>
+        </div>
+        <!-- MD AND LARGER -->
+        <div class="mes-footer-box hidden-xs hidden-sm col-md-6">
+          <img width="300" src="images/mes2015.jpg" />
+        </div>
+        <div class="mes-footer-box hidden-xs hidden-sm col-md-6">
+          <table class="mes-vertical-table-footer">
+            <tr><td class="mes-vertical-td">
+              <p><b>Contact: marc.eliot.stein@gmail.com</b></p>
+              <p>Washington DC<br />New York City<br />Anywhere</p>
+              <p><a class="mes-anchor" target="_blank" href="https://www.linkedin.com/profile/view?id=3629296">Linked In</a></p>
+              <p><a class="mes-anchor" target="_blank" href="https://github.com/marceliotstein">GitHub</a></p>
+            </td></tr>
+          </table>
+        </div>
+      </div>
 
     </div>
+    <!-- END OF MAIN THEATRE -->
 
-
-    <!-- FOOTER -->
-    <div class="col-xs-12 row mes-footer center-block">
-      <!-- XS AND SM ONLY -->
-      <div class="mes-footer-box col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl">
-        <img width="180" src="images/mes2015little.jpg" />
-      </div>
-      <div class="mes-footer-box col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl text-center">
-        <table class="mes-vertical-table-footer">
-          <tr><td class="mes-vertical-td">
-            <p><b>Contact: marc.eliot.stein@gmail.com</b></p>
-            <p>Washington DC<br />New York City<br />Anywhere</p>
-            <p><a class="mes-anchor" target="_blank" href="https://www.linkedin.com/profile/view?id=3629296">LinkedIn</a></p>
-            <p><a class="mes-anchor" target="_blank" href="https://github.com/marceliotstein">GitHub</a></p>
-          </td></tr>
-        </table>
-      </div>
-      <!-- MD AND LARGER -->
-      <div class="mes-footer-box hidden-xs hidden-sm col-md-6">
-        <img width="300" src="images/mes2015.jpg" />
-      </div>
-      <div class="mes-footer-box hidden-xs hidden-sm col-md-6">
-        <table class="mes-vertical-table-footer">
-          <tr><td class="mes-vertical-td">
-            <p><b>Contact: marc.eliot.stein@gmail.com</b></p>
-            <p>Washington DC<br />New York City<br />Anywhere</p>
-            <p><a class="mes-anchor" target="_blank" href="https://www.linkedin.com/profile/view?id=3629296">Linked In</a></p>
-            <p><a class="mes-anchor" target="_blank" href="https://github.com/marceliotstein">GitHub</a></p>
-          </td></tr>
-        </table>
-      </div>
+    <div class="col-md-1">
     </div>
-
   </div>
-  <!-- END OF MAIN THEATRE -->
 
-  <div class="col-md-1">
-  </div>
-</div>
-
-<script>
-angular.bootstrap(document, ['DemoApp']);
-</script>
+  <script>
+  angular.bootstrap(document, ['DemoApp']);
+  </script>
 </body>
 </html>

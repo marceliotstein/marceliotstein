@@ -85,20 +85,16 @@ input.tiny {
 .mes-blurb {
   padding: 10px;
   text-align: center;
-  border-style: solid;
-  border-width: 2px;
-  border-color: #7f7f7f;
-  border-radius: 9px;
 }
 
 ul[mes-carousel-xs] {
   width: 300px;
-  height: 620px;
+  height: 460px;
 }
 
 ul[mes-carousel-md] {
   width: 300px;
-  height: 620px;
+  height: 460px;
 }
 
 .mes-body {
@@ -157,17 +153,24 @@ ul[mes-carousel-md] {
   text-align: center;
 }
 
-.mes-vertical-table {
-  /*height: 300px;*/
+.mes-narrow-table {
+  min-width: 320px;
 }
 
-.mes-vertical-td {
+.mes-narrow-td {
   height: 100%;
   vertical-align: middle;
   text-align: center;
 }
 
-.mes-td-half {
+.mes-wide-table {
+  width: 100%;
+}
+
+.mes-wide-td {
+  height: 100%;
+  vertical-align: middle;
+  margin: 0px auto;
   width: 50%;
 }
 
