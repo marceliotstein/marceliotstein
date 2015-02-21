@@ -1,16 +1,25 @@
 /*
- * marceliotstein.css -- css for MarcEliotStein.com
- */
+* marceliotstein.css -- css for MarcEliotStein.com
+*/
 
- ul[mes-carousel-xs] {
-     width: 300px;
-     height: 620px;
- }
+.mes-blurb {
+  padding: 10px;
+  text-align: center;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #7f7f7f;
+  border-radius: 9px;
+}
 
- ul[mes-carousel-md] {
-     width: 700px;
-     height: 300px;
- }
+ul[mes-carousel-xs] {
+  width: 300px;
+  height: 620px;
+}
+
+ul[mes-carousel-md] {
+  width: 700px;
+  height: 300px;
+}
 
 .mes-body {
   background-color: #ffffff;
@@ -38,10 +47,20 @@
   max-width: 550px;
 }
 
-.mes-feature {
+.mes-hr {
+  margin-top: 18px;
   border-style: solid;
-  border-width: 3px;
+  border-width: 4px;
   border-color: black;
+  border-radius: 9px;
+  max-width: 700px;
+}
+
+.mes-feature {
+  text-align: center;
+  border-style: solid;
+  border-width: 7px;
+  border-color: blue;
   border-radius: 9px;
   max-width: 700px;
 }
@@ -78,6 +97,7 @@
 }
 
 .mes-blurb {
+  width: 320px;
   text-align: center;
   padding: 10px;
 }
