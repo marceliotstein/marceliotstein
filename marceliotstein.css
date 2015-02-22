@@ -226,4 +226,9 @@ ul[mes-carousel-md] {
   display: none;
 }
 
+.mes-main-theatre {
+  border-style: dashed;
+  border-width: 1px;
+  border-color: gray;
+}
 /* END */
