@@ -1,17 +1,17 @@
 <?php
-  /*
-   * Angular implementation of MarcEliotStein.com
-   *
-   * optional d=* parameter for debug
-   *
-   */
+/*
+* Angular implementation of MarcEliotStein.com
+*
+* optional d=* parameter for debug
+*
+*/
 
-  // get optional param
+// get optional param
 
-  $debug = false;
-  if (!empty($_GET['d'])) {
-    $debug = true;
-  }
+$debug = false;
+if (!empty($_GET['d'])) {
+  $debug = true;
+}
 ?>
 <!DOCTYPE html>
 <html ng-app="projectStore">
@@ -48,10 +48,11 @@
         <!-- NARROW XS -->
         <div class="col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
           <div class="carousel-demo">
-            <ul rn-carousel mes-carousel-xs rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2">
-              <li ng-repeat="slide in slides2 track by slide.id" ng-class="'id-' + slide.id">
+            <div class="mes-project-box col-xs-12">
+              <ul rn-carousel mes-carousel-xs rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2">
+                <li ng-repeat="slide in slides2 track by slide.id" ng-class="'id-' + slide.id">
 
-                <div class="mes-project-box col-xs-12">
+
                   <img class="mes-project-img img-responsive" ng-src={{slide.imgmedium}} />
 
                   <table class="mes-table">
@@ -61,13 +62,15 @@
                       <p><a class="mes-anchor" ng-href="{{slide.projlink}}">{{slide.projlink}}</a></p>
                     </td></tr>
                   </table>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div rn-carousel-indicators ng-if="slides2.length > 1" slides="slides2" rn-carousel-index="carouselIndex2"></div>
+                </li>
+              </ul>
+              <div rn-carousel-indicators ng-if="slides2.length > 1" slides="slides2" rn-carousel-index="carouselIndex2">
+              </div>
 
-          <div class="col-xs-12 center-block">
+            </div>
+          </div>
+
+          <div class="mes-narrow-blurb col-xs-12 center-block">
             <img src="images/mesblurb600.png" class="img-responsive" alt="Advanced web development. Social + Responsive" />
           </div>
         </div>
@@ -75,12 +78,10 @@
         <!-- NARROW SM -->
         <div class="hidden-xs col-sm-12 hidden-md hidden-lg hidden-xl">
           <div class="carousel-demo">
-            <ul rn-carousel mes-carousel-sm rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2">
-              <li ng-repeat="slide in slides2 track by slide.id" ng-class="'id-' + slide.id">
-
-                <div class="mes-project-box col-xs-12">
+            <div class="mes-project-box col-xs-12">
+              <ul rn-carousel mes-carousel-sm rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2">
+                <li ng-repeat="slide in slides2 track by slide.id" ng-class="'id-' + slide.id">
                   <img class="mes-project-img img-responsive" ng-src={{slide.imgmedium}} />
-
                   <table class="mes-table">
                     <tr><td class="mes-narrow-td">
                       <p class="mes-project-title">{{slide.label}}</p>
@@ -88,11 +89,12 @@
                       <p><a class="mes-anchor" ng-href="{{slide.projlink}}">{{slide.projlink}}</a></p>
                     </td></tr>
                   </table>
-                </div>
-              </li>
-            </ul>
+                </li>
+              </ul>
+              <div rn-carousel-indicators ng-if="slides2.length > 1" slides="slides2" rn-carousel-index="carouselIndex2">
+              </div>
+            </div>
           </div>
-          <div rn-carousel-indicators ng-if="slides2.length > 1" slides="slides2" rn-carousel-index="carouselIndex2"></div>
 
           <div class="mes-narrow-blurb col-sm-12 center-block">
             <img src="images/mesblurb600.png" alt="Advanced web development. Social + Responsive" />

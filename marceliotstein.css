@@ -8,11 +8,6 @@ html, body {
   margin:0;
 }
 
-body {
-  margin: 0;
-  /*padding: 10px;*/
-}
-
 a {
   color:white;
 }
@@ -90,12 +85,12 @@ input.tiny {
 
 ul[mes-carousel-xs] {
   width: 420px;
-  height: 800px;
+  height: 580px;
 }
 
 ul[mes-carousel-sm] {
   width: 600px;
-  height: 800px;
+  height: 770px;
 }
 
 ul[mes-carousel-md] {
@@ -220,10 +215,12 @@ ul[mes-carousel-md] {
 }
 
 .mes-narrow-blurb {
+  margin-top: 50px;
   padding: 0px;
 }
 
 .mes-wide-blurb {
+  margin-top: 30px;
   width: 320px;
   text-align: center;
   padding: 10px;
