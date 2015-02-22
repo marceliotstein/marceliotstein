@@ -85,16 +85,17 @@ input.tiny {
 .mes-blurb {
   padding: 10px;
   text-align: center;
+  max-width: 500px;
 }
 
 ul[mes-carousel-xs] {
-  width: 500px;
+  width: 550px;
   height: 800px;
 }
 
 ul[mes-carousel-md] {
   width: 300px;
-  height: 520px;
+  height: 450px;
 }
 
 .mes-body {
@@ -162,13 +163,30 @@ ul[mes-carousel-md] {
   border-color: black;*/
 }
 
-.mes-footer-td {
+.mes-narrow-footer-td {
   height: 100%;
   vertical-align: middle;
   margin: 0px auto;
   /*border-style: dashed;
   border-width: 1px;
   border-color: black;*/
+}
+
+.mes-wide-footer-td {
+  width: 50%;
+  height: 100%;
+  vertical-align: middle;
+  margin: 0px auto;
+  /*border-style: dashed;
+  border-width: 1px;
+  border-color: black;*/
+}
+
+.mes-selfie {
+  max-width: 500px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
 }
 
 .mes-narrow-td {
