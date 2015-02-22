@@ -172,7 +172,7 @@ if (!empty($_GET['d'])) {
             <p>Contact: <b>marc.eliot.stein@gmail.com</b></p>
             <p>Specialties: <b>Drupal, PHP, Angular.JS, JQuery, Bootstrap, MySQL, Solr, OOP, Agile</b></p>
             <p>Availability: <b>Washington DC - New York City - Anywhere</b></p>
-            <p><a class="mes-anchor" target="_blank" href="https://www.linkedin.com/profile/view?id=3629296">LinkedIn</a></p>
+            <p><a class="mes-anchor" target="_blank" href="https://www.linkedin.com/in/marceliotstein">LinkedIn</a></p>
             <p><a class="mes-anchor" target="_blank" href="https://github.com/marceliotstein">GitHub</a></p>
           </td></tr>
         </table>
