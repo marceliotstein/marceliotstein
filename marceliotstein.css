@@ -89,6 +89,11 @@ input.tiny {
 }
 
 ul[mes-carousel-xs] {
+  width: 420px;
+  height: 800px;
+}
+
+ul[mes-carousel-sm] {
   width: 550px;
   height: 800px;
 }
@@ -183,10 +188,13 @@ ul[mes-carousel-md] {
 }
 
 .mes-selfie {
-  max-width: 500px;
   border-style: solid;
   border-width: 2px;
   border-color: black;
+}
+
+.mes-md-selfie {
+  max-width: 400px;
 }
 
 .mes-narrow-td {
@@ -213,7 +221,6 @@ ul[mes-carousel-md] {
 
 .mes-narrow-blurb {
   padding: 0px;
-  margin: 0px;
 }
 
 .mes-wide-blurb {
@@ -227,8 +234,10 @@ ul[mes-carousel-md] {
 }
 
 .mes-main-theatre {
+  /*
   border-style: dashed;
   border-width: 1px;
   border-color: gray;
+  */
 }
 /* END */
