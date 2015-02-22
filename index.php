@@ -5,7 +5,9 @@
    * optional d=* parameter for debug
    *
    */
-<?php
+
+  // get optional param
+
   $debug = false;
   if (!empty($_GET['d'])) {
     $debug = true;
