@@ -125,7 +125,6 @@ ul[mes-carousel-md] {
   border-width: 4px;
   border-color: black;
   border-radius: 9px;
-  max-width: 900px;
 }
 
 .mes-feature-box {
@@ -213,7 +212,6 @@ ul[mes-carousel-md] {
   text-align: center;
   margin-top: 30px;
   margin-bottom: 30px;
-  max-width: 900px;
 }
 
 .mes-narrow-blurb {

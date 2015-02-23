@@ -102,7 +102,7 @@ if (!empty($_GET['d'])) {
         </div>
 
         <!-- WIDE -->
-        <div class="hidden-xs hidden-sm col-md-12 col-lg-12 col-xl-12">
+        <div class="mes-wide-main hidden-xs hidden-sm col-md-12 col-lg-12 col-xl-12">
           <table class="mes-table">
             <tr>
               <td class="mes-wide-td">
