@@ -204,6 +204,9 @@ if (!empty($_GET['d'])) {
     <div class="hidden-xs hidden-sm hidden-md hidden-lg col-xl-12">
       XL
     </div>
+    <div class="hidden-xs hidden-sm hidden-md col-xl-12">
+      XL2
+    </div>
   </div>
 <?php endif; ?>
 
