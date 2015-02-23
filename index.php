@@ -35,10 +35,15 @@ if (!empty($_GET['d'])) {
   <!-- MAIN THEATRE -->
   <div class="mes-main-theatre col-xs-12 col-sm-12 col-md-10 text-center">
 
-    <!-- HEADER -->
-    <div class="mes-title center-block">
+    <!-- HEADER NARROW (FLUID) -->
+    <div class="mes-title hidden-lg hidden-xl center-block">
       <img src="images/meslogo1200.png" class="img-responsive" alt="Marc Eliot Stein. Advanced website development. Specialty in Drupal, Angular, Bootstrap.">
       <div class="mes-hr"></div>
+    </div>
+    <!-- HEADER WIDE (FIXED) -->
+    <div class="mes-title hidden-xs hidden-sm hidden-md col-lg-10 col-xl-10 center-block">
+      <img src="images/meslogo1200.png" class="mes-title-fixed-wide" alt="Marc Eliot Stein. Advanced website development. Specialty in Drupal, Angular, Bootstrap.">
+      <div class="mes-hr mes-title-fixed-wide"></div>
     </div>
 
     <!-- MAIN CONTENT -->
@@ -101,17 +106,17 @@ if (!empty($_GET['d'])) {
           </div>
         </div>
 
-        <!-- WIDE -->
-        <div class="mes-wide-main hidden-xs hidden-sm col-md-12 col-lg-12 col-xl-12">
+        <!-- WIDE MD -->
+        <div class="hidden-xs hidden-sm col-md-12 hidden-lg hidden-xl">
           <table class="mes-table">
             <tr>
-              <td class="mes-wide-td">
+              <td class="mes-wide-md-td">
                 <div class="mes-wide-blurb center-block">
                   <img src="images/mesblurb600.png" class="img-responsive" alt="Advanced web development for arts,
-                  media, music, business, books, law, government. Social + Responsive" />
+                  media, music, business, books, law, government. Social + Responsive (LG)" />
                 </div>
               </td>
-              <td class="mes-wide-td">
+              <td class="mes-wide-md-td">
                 <div class="mes-feature-box">
                   <div class="carousel-demo">
                     <ul rn-carousel mes-carousel-md rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2">
@@ -132,7 +137,39 @@ if (!empty($_GET['d'])) {
             </tr>
           </table>
         </div>
-        <!-- END OF WIDE WAY -->
+
+        <!-- WIDE LG AND XL -->
+        <div class="hidden-xs hidden-sm hidden-md col-lg-12 col-xl-12">
+          <table class="mes-lg-table">
+            <tr>
+              <td class="mes-wide-lg-td">
+                <div class="mes-wide-blurb center-block">
+                  <img src="images/mesblurb600.png" class="img-responsive" alt="Advanced web development for arts,
+                  media, music, business, books, law, government. Social + Responsive (XL)" />
+                </div>
+              </td>
+              <td class="mes-wide-lg-td">
+                <div class="mes-feature-box">
+                  <div class="carousel-demo">
+                    <ul rn-carousel mes-carousel-md rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2">
+                      <li ng-repeat="slide in slides2 track by slide.id" ng-class="'id-' + slide.id">
+                        <img class="mes-project-img img-responsive" ng-src={{slide.imgsmall}} />
+                        <p class="mes-project-title">{{slide.label}}</p>
+                        <p><b><i>{{slide.blurb}}</i></b></p>
+                        <p>{{slide.tech}}</p>
+                        <p>{{slide.year}}</p>
+                        <p><a class="mes-anchor" ng-href="{{slide.projlink}}">{{slide.projlink}}</a></p>
+                      </li>
+                    </ul>
+                    <div rn-carousel-indicators ng-if="slides2.length > 1" slides="slides2" rn-carousel-index="carouselIndex2">
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!-- END OF WIDE LG -->
 
       </div>
     </div>
@@ -184,8 +221,7 @@ if (!empty($_GET['d'])) {
 
   <!-- OPTIONAL BUFFER -->
   <div class="hidden-xs hidden-sm col-md-1">
-  </div>
-</div>
+
 
 <?php if ($debug): ?>
   <div class="showbreaks">
@@ -204,11 +240,10 @@ if (!empty($_GET['d'])) {
     <div class="hidden-xs hidden-sm hidden-md hidden-lg col-xl-12">
       XL
     </div>
-    <div class="hidden-xs hidden-sm hidden-md col-xl-12">
-      XL2
-    </div>
   </div>
 <?php endif; ?>
+</div>
+</div>
 
 <script>
 angular.bootstrap(document, ['DemoApp']);
