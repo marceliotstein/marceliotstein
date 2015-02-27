@@ -28,20 +28,17 @@ if (!empty($_GET['d'])) {
 <body class="mes-body container-fluid"
 
 <div class="row">
-  <!-- OPTIONAL BUFFER -->
-  <div class="hidden-xs hidden-sm col-md-1">
-  </div>
 
   <!-- MAIN THEATRE -->
-  <div class="mes-main-theatre col-xs-12 col-sm-12 col-md-10 text-center">
+  <div class="mes-main-theatre col-xs-12 col-sm-12 col-md-12">
 
     <!-- HEADER NARROW (FLUID) -->
-    <div class="mes-title hidden-lg hidden-xl center-block">
+    <div class="mes-center-title hidden-lg hidden-xl text-center center-block">
       <img src="images/meslogo1200.png" class="img-responsive" alt="Marc Eliot Stein. Advanced website development. Specialty in Drupal, Angular, Bootstrap.">
       <div class="mes-hr"></div>
     </div>
     <!-- HEADER WIDE (FIXED) -->
-    <div class="mes-title hidden-xs hidden-sm hidden-md col-lg-10 col-xl-10 center-block">
+    <div class="mes-left-title hidden-xs hidden-sm hidden-md col-lg-12 col-xl-12">
       <img src="images/meslogo1200.png" class="mes-title-fixed-wide" alt="Marc Eliot Stein. Advanced website development. Specialty in Drupal, Angular, Bootstrap.">
       <div class="mes-hr mes-title-fixed-wide"></div>
     </div>
@@ -111,12 +108,6 @@ if (!empty($_GET['d'])) {
           <table class="mes-table">
             <tr>
               <td class="mes-wide-md-td">
-                <div class="mes-wide-blurb center-block">
-                  <img src="images/mesblurb600.png" class="img-responsive" alt="Advanced web development for arts,
-                  media, music, business, books, law, government. Social + Responsive (LG)" />
-                </div>
-              </td>
-              <td class="mes-wide-md-td">
                 <div class="mes-feature-box">
                   <div class="carousel-demo">
                     <ul rn-carousel mes-carousel-md rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2">
@@ -132,6 +123,12 @@ if (!empty($_GET['d'])) {
                     <div rn-carousel-indicators ng-if="slides2.length > 1" slides="slides2" rn-carousel-index="carouselIndex2">
                     </div>
                   </div>
+                </div>
+              </td>
+              <td class="mes-wide-md-td">
+                <div class="mes-wide-blurb center-block">
+                  <img src="images/mesblurb600.png" class="img-responsive" alt="Advanced web development for arts,
+                  media, music, business, books, law, government. Social + Responsive (LG)" />
                 </div>
               </td>
             </tr>
@@ -143,12 +140,6 @@ if (!empty($_GET['d'])) {
           <table class="mes-lg-table">
             <tr>
               <td class="mes-wide-lg-td">
-                <div class="mes-wide-blurb center-block">
-                  <img src="images/mesblurb600.png" class="img-responsive" alt="Advanced web development for arts,
-                  media, music, business, books, law, government. Social + Responsive (XL)" />
-                </div>
-              </td>
-              <td class="mes-wide-lg-td">
                 <div class="mes-feature-box">
                   <div class="carousel-demo">
                     <ul rn-carousel mes-carousel-md rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2">
@@ -164,6 +155,12 @@ if (!empty($_GET['d'])) {
                     <div rn-carousel-indicators ng-if="slides2.length > 1" slides="slides2" rn-carousel-index="carouselIndex2">
                     </div>
                   </div>
+                </div>
+              </td>
+              <td class="mes-wide-lg-td">
+                <div class="mes-wide-blurb center-block">
+                  <img src="images/mesblurb600.png" class="img-responsive" alt="Advanced web development for arts,
+                  media, music, business, books, law, government. Social + Responsive (XL)" />
                 </div>
               </td>
             </tr>
@@ -202,47 +199,41 @@ if (!empty($_GET['d'])) {
             <img class="mes-selfie mes-md-selfie" src="images/mesbooks600.jpg" />
           </td>
           <!-- LG AND XL -->
-          <tr><td class="mes-wide-footer-td hidden-md col-lg-12">
-            <img class="mes-selfie" src="images/mesbooks600.jpg" />
-          </td>
-          <td class="mes-wide-footer-td">
-            <p>Contact: <b>marc.eliot.stein@gmail.com</b></p>
-            <p>Specialties: <b>Drupal, PHP, Angular.JS, JQuery, Bootstrap, MySQL, Solr, OOP, Agile</b></p>
-            <p>Availability: <b>Washington DC - New York City - Anywhere</b></p>
-            <p><a class="mes-anchor" target="_blank" href="https://www.linkedin.com/in/marceliotstein">LinkedIn</a></p>
-            <p><a class="mes-anchor" target="_blank" href="https://github.com/marceliotstein">GitHub</a></p>
-          </td></tr>
+          <tr>
+            <td class="mes-wide-footer-td">
+              <p>Contact: <b>marc.eliot.stein@gmail.com</b></p>
+              <p>Specialties: <b>Drupal, PHP, Angular.JS, JQuery, Bootstrap, MySQL, Solr, OOP, Agile</b></p>
+              <p>Availability: <b>Washington DC - New York City - Anywhere</b></p>
+              <p><a class="mes-anchor" target="_blank" href="https://www.linkedin.com/in/marceliotstein">LinkedIn</a></p>
+              <p><a class="mes-anchor" target="_blank" href="https://github.com/marceliotstein">GitHub</a></p>
+            </td>
+            <td class="mes-wide-footer-td hidden-md col-lg-12">
+              <img class="mes-selfie" src="images/mesbooks600.jpg" />
+            </td>
+          </tr>
         </table>
       </div>
     </div>
-
+    <?php if ($debug): ?>
+      <div class="showbreaks">
+        <div class="col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
+          XS
+        </div>
+        <div class="hidden-xs col-sm-12 hidden-md hidden-lg hidden-xl">
+          SM
+        </div>
+        <div class="hidden-xs hidden-sm col-md-12 hidden-lg hidden-xl">
+          MD
+        </div>
+        <div class="hidden-xs hidden-sm hidden-md col-lg-12 hidden-xl">
+          LG
+        </div>
+        <div class="hidden-xs hidden-sm hidden-md hidden-lg col-xl-12">
+          XL
+        </div>
+      </div>
+    <?php endif; ?>
   </div>
-  <!-- END OF MAIN THEATRE -->
-
-  <!-- OPTIONAL BUFFER -->
-  <div class="hidden-xs hidden-sm col-md-1">
-
-
-<?php if ($debug): ?>
-  <div class="showbreaks">
-    <div class="col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
-      XS
-    </div>
-    <div class="hidden-xs col-sm-12 hidden-md hidden-lg hidden-xl">
-      SM
-    </div>
-    <div class="hidden-xs hidden-sm col-md-12 hidden-lg hidden-xl">
-      MD
-    </div>
-    <div class="hidden-xs hidden-sm hidden-md col-lg-12 hidden-xl">
-      LG
-    </div>
-    <div class="hidden-xs hidden-sm hidden-md hidden-lg col-xl-12">
-      XL
-    </div>
-  </div>
-<?php endif; ?>
-</div>
 </div>
 
 <script>
