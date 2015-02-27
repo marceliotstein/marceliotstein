@@ -193,25 +193,16 @@ if (!empty($_GET['d'])) {
       </div>
       <!-- WIDE -->
       <div class="mes-footer-box hidden-xs hidden-sm col-md-12">
-        <table class="mes-table">
-          <!-- MD ONLY -->
-          <tr><td class="mes-wide-footer-td col-md-12 hidden-lg hidden-xl">
-            <img class="mes-selfie mes-md-selfie" src="images/mesbooks600.jpg" />
-          </td>
-          <!-- LG AND XL -->
-          <tr>
-            <td class="mes-wide-footer-td">
-              <p>Contact: <b>marc.eliot.stein@gmail.com</b></p>
-              <p>Specialties: <b>Drupal, PHP, Angular.JS, JQuery, Bootstrap, MySQL, Solr, OOP, Agile</b></p>
-              <p>Availability: <b>Washington DC - New York City - Anywhere</b></p>
-              <p><a class="mes-anchor" target="_blank" href="https://www.linkedin.com/in/marceliotstein">LinkedIn</a></p>
-              <p><a class="mes-anchor" target="_blank" href="https://github.com/marceliotstein">GitHub</a></p>
-            </td>
-            <td class="mes-wide-footer-td hidden-md col-lg-12">
-              <img class="mes-selfie" src="images/mesbooks600.jpg" />
-            </td>
-          </tr>
-        </table>
+        <div class="mes-footer-wide-box">
+          <img class="mes-selfie" src="images/mesbooks600.jpg" />
+        </div>
+        <div class="mes-footer-wide-box">
+          <p>Contact: <b>marc.eliot.stein@gmail.com</b></p>
+          <p>Specialties: <b>Drupal, PHP, Angular.JS, JQuery, Bootstrap, MySQL, Solr, OOP, Agile</b></p>
+          <p>Availability: <b>Washington DC - New York City - Anywhere</b></p>
+          <p><a class="mes-anchor" target="_blank" href="https://www.linkedin.com/profile/view?id=3629296">LinkedIn</a></p>
+          <p><a class="mes-anchor" target="_blank" href="https://github.com/marceliotstein">GitHub</a></p>
+        </div>
       </div>
     </div>
     <?php if ($debug): ?>
