@@ -18,12 +18,12 @@ if (!empty($_GET['d'])) {
 <head>
   <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="angular-carousel/angular-carousel.css" />
-  <link rel="stylesheet" type="text/css" href="marceliotstein.css" />
+  <link rel="stylesheet" type="text/css" href="marceliotstein.css?r=fdjkslfd" />
   <script type="text/javascript" src="angular/angular.js"></script>
   <script type="text/javascript" src="angular/angular-touch.js"></script>
   <script type="text/javascript" src="ui-bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
   <script type="text/javascript" src="angular-carousel/angular-carousel.js"></script>
-  <script type="text/javascript" src="marceliotstein.js"></script>
+  <script type="text/javascript" src="marceliotstein.js?r=rewiorew"></script>
 </head>
 <body class="mes-body container-fluid"
 
